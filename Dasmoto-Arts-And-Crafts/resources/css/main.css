@@ -1,0 +1,39 @@
+/* Review: Example used Helvetica everywhere and has sans-serif as a fallback. Wasn't specified so I left the paragraphs as default */
+
+header {
+	background-image: url("../imgs/pattern.webp");
+
+	/* Review: I added this because I thought it looked nicer */
+	background-size: 100%;
+}
+header > h1 {
+	font-family: Helvetica;
+	font-size: 100px;
+	font-weight: bold;
+	color: khaki;
+	padding: 20px;
+
+	text-align: center;
+}
+
+h2 {
+	font-family: Helvetica;
+	font-size: 32px;
+	font-weight: bold;
+	color: white;
+}
+#brushes-title {
+	background-color: mediumspringgreen;
+}
+#frames-title {
+	background-color: lightcoral;
+}
+#paint-title {
+	background-color: skyblue;
+}
+
+.item-starting-price {
+	font-family: Helvetica;
+	font-weight: bold;
+	color: blue;
+}
