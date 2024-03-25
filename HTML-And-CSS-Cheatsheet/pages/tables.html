@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/css/global.css">
+	<title>Tables - HTML and CSS Cheatsheet</title>
+</head>
+
+<body>
+	<nav>
+		<a href=".">
+			<h1>
+				HTML and CSS Cheatsheet
+			</h1>
+		</a>
+	</nav>
+
+
+	<h2>
+		Tables
+	</h2>
+	<main>
+		<section>
+			<h3>
+				The Basics
+			</h3>
+			<p>
+				In HTML, tables are created with the <span class="code">&lt;table&gt;</span> tag. This then contains
+				rows with the <span class="code">&lt;tr&gt;</span> tag which then contain data with <span
+					class="code">&lt;td&gt;</span> and headers with <span class="code">&lt;th&gt;</span>. Here's a basic
+				example:
+			</p>
+			<div class="code">
+				<span>&lt;table&gt;</span> <br>
+				<span class="indented" style="--indent: 1">&lt;tr&gt;</span> <br>
+				<span class="indented" style="--indent: 2">&lt;td&gt;John Smith&lt;/td&gt;</span> <br>
+				<span class="indented" style="--indent: 2">&lt;td&gt;42&lt;/td&gt;</span> <br>
+				<span class="indented" style="--indent: 1">&lt;/tr&gt;</span> <br>
+				<span>&lt;/table&gt;</span> <br>
+			</div>
+			<p>
+				Which produces:
+			</p>
+			<table>
+				<tr>
+					<td>John Smith</td>
+					<td>42</td>
+				</tr>
+			</table>
+		</section>
+
+		<br><br>
+
+		<section>
+			<h3>
+				The Different Parts
+			</h3>
+			<p>
+				Inside of a <span class="code">&lt;table&gt;</span> tag, it's best practice to use the following tags to
+				group together the different parts of the table:
+			</p>
+			<ul>
+				<li>
+					<p><span class="code">&lt;thead&gt;</span> contains the labels at the top</p>
+				</li>
+				<li>
+					<p><span class="code">&lt;tbody&gt;</span> contains the actual data of the table</p>
+				</li>
+				<li>
+					<p>And <span class="code">&lt;tfoot&gt;</span> contains the footer with things like totals and averages if applicable.</p>
+				</li>
+			</ul>
+		</section>
+
+	</main>
+</body>
+
+</html>
