@@ -1,0 +1,60 @@
+table {
+	--border-color: #d0d3da;
+
+	/* border-collapse: collapse; */
+	width: 100%;
+	margin: auto;
+	font-size: 1.25em;
+}
+.table-container {
+	overflow: scroll;
+}
+tr{
+	border-top: 2px solid var(--border-color);
+}
+td, th {
+	padding: 10px 20px;
+	text-align: left;
+}
+th {
+	font-weight: normal;
+}
+thead > tr {
+	border-bottom: 3px solid var(--border-color);
+	
+}
+table {
+	border-collapse: collapse;
+}
+.cand-role {
+	border-right: 2px solid var(--border-color);
+}
+
+.name{
+	font-weight: bold;
+}
+
+.view-btn {
+	background-color: #e4e6ec;
+	font-weight: bold;
+	color: black;
+	text-transform: uppercase;
+	padding: 10px 40px;
+	border: 2px solid #b5b8c0;
+	border-radius: 20px  20px;
+}
+
+
+#candidates{
+	background-color: white;
+}
+
+/* */
+
+@media screen and  (max-width: 920px) {
+	table {
+		width:100%
+		
+	}
+
+}

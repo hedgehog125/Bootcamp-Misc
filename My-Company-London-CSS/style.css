@@ -82,7 +82,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-flow: row wrap;
-	
+
 	align-items: flex-start;
 
 }
@@ -90,38 +90,54 @@ main {
 
 
 section {
-	
 	width: 75%;
 	padding: 100px 100px;
 
 	border-bottom: 15px solid black;
 }
+
 @media screen and (max-width: 950px) {
 	section {
 		width: 100%;
 		padding: 10px 10px;
 	}
-	body{
+
+	body {
 		margin: 0;
 	}
+	main {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
 	.navigation {
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 	}
+	.navigation nav {
+		width: 100%;
+	}
+
 	nav ul {
 		display: block;
 	}
+
 	nav ul li {
 		display: block;
 	}
-	nav a, nav li.current a, nav li.last a {
+
+	nav a,
+	nav li.current a,
+	nav li.last a {
+		display: block;
+		text-align: center;
 		padding-left: 0;
 		padding-right: 0;
 	}
 }
 
-@media screen and (min-width: 950px) and (max-width: 1200px){
-	section{
+@media screen and (min-width: 950px) and (max-width: 1200px) {
+	section {
 		padding: 20px 20px;
 		width: 80%;
 	}
@@ -131,25 +147,23 @@ section p {
 	font-size: 1.2rem;
 }
 
-#about {
+.white-card {
 	background-color: white;
-
 }
 
-#services {
-	background-color: var(--section-background-color);
-}
-
-#contacts {
-	background-color: var(--section-background-color);
+.gray-card {
+	background-color: #d9d9d9;
 }
 
 .right {
 	margin-left: auto;
-
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
 }
 
-button {
+button.standard-button {
 	margin-top: 30px;
 	background-color: black;
 	color: var(--background-color);
@@ -158,3 +172,53 @@ button {
 	border: none;
 }
 
+#picture {
+	padding: 0;
+	border: 25px solid black;
+	width: fit-content;
+}
+#picture img {
+	
+	height: auto;
+	display: block;
+}
+
+#loremipsum {
+	margin-left: auto;
+	
+	
+}
+#loremipsum div {
+	display: flex;
+}
+
+#loremipsum div p {
+	padding: 0 20px;;
+}
+
+#dolor {
+	background-color: var(--section-background-color);
+}
+
+@media screen and  (max-width: 920px) {
+	body {
+		margin: auto;
+		
+	}
+	#picture img {
+		width: 100%;
+		height: auto;
+	}
+
+	#Map p {
+		font-size: 15px;
+	}
+
+}
+@media screen and  (min-width: 920px)  and (max-width:1500px){
+	#picture img {
+		width: 100%;
+		height: 100%;
+	}
+
+}

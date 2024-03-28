@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-	<title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+	<title>Contact My Company London</title>
   </head>
   <body>
 	<header>
@@ -14,23 +15,23 @@
 		<div class="navigation">
 			<nav>
 				<ul>
-					<li class="current"><a href="/">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="/services.html">Services</a></li>
-					<li class="last"><a href="/contact.html"> Contact</a></li>
+					<li class="current last"><a href="/contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
     <main>
-      <section id="contactus">
+      <section id="contactus" class="gray-card">
         <h2>Contact us</h2>
         <p>
           If you would like to get in touch with us please use the form below
         </p>
 
-        <form action="" method="get" class="form">
+        <form action="" method="post" class="form">
           <div class="form">
-            <label for="name">Name: </label><br />
+            <label for="name">Name</label><br />
             <input
               type="text"
               name="name"
@@ -40,7 +41,7 @@
             />
           </div>
           <div class="form">
-            <label for="email">Email: </label><br />
+            <label for="email">Email</label><br />
             <input
               type="email"
               name="email"
@@ -49,7 +50,7 @@
               required
             />
           </div>
-          <label for="name">Message: </label><br />
+          <label for="name">Message</label><br />
           <textarea
             id="message"
             name="message"
@@ -60,23 +61,19 @@
           ></textarea>
 
           <div class="form">
-            <input type="submit" value="Send" />
+            <button type="submit" class="standard-button">Send</button>
           </div>
         </form>
       </section>
-      <section id="Map">
+      <section id="Map" class="right white-card">
         <h2>Map</h2>
         <p>
-          nly five centuries, but also the leap into electronic typesetting,
+          Only five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged. It was popularised in the 1960s with
           the release of Letraset sheets containing Lorem Ipsum passages
         </p>
-        <iframe
+        <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10082.689133975597!2d-0.1219325!3d50.81871025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585bbe0f176ed%3A0x260eae2ecb828dd1!2sKemptown%2C%20Brighton%20and%20Hove%2C%20Brighton!5e0!3m2!1sen!2suk!4v1710940283657!5m2!1sen!2suk"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
