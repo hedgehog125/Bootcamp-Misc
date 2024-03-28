@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	--background-color: #f7f02c;
+	--section-background-color: #d9d9d9;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+body {
+	background-color: var(--background-color);
+	margin: 100px 100px;
+}
+
+.title-image {
+	border: 20px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-image>img {
+	width: 50%;
+	height: auto;
+	padding: 75px 0px;
+}
+
+.navigation {
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul {
+	display: inline;
+	margin-left: auto;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	font-size: 1.5rem;
+}
+
+nav a {
+	--h-pad: 35px;
+
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 7.5px var(--h-pad);
+	padding-right: 0px;
+}
+
+nav li.current a {
+	background-color: black;
+	color: white;
+	padding-right: var(--h-pad);
+}
+
+nav li.last a {
+	padding-right: calc(var(--h-pad) * 0.75);
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-flow: row wrap;
+	
+	align-items: flex-start;
+
+}
+
+
+
+section {
+	
+	width: 75%;
+	padding: 100px 100px;
+
+	border-bottom: 15px solid black;
+}
+@media screen and (max-width: 950px) {
+	section {
+		width: 100%;
+		padding: 10px 10px;
+	}
+	body{
+		margin: 0;
+	}
+	.navigation {
+		flex-direction: column;
+		align-items: center;
+	}
+	nav ul {
+		display: block;
+	}
+	nav ul li {
+		display: block;
+	}
+	nav a, nav li.current a, nav li.last a {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 950px) and (max-width: 1200px){
+	section{
+		padding: 20px 20px;
+		width: 80%;
+	}
+}
+
+section p {
+	font-size: 1.2rem;
+}
+
+#about {
+	background-color: white;
+
+}
+
+#services {
+	background-color: var(--section-background-color);
+}
+
+#contacts {
+	background-color: var(--section-background-color);
+}
+
+.right {
+	margin-left: auto;
+
+}
+
+button {
+	margin-top: 30px;
+	background-color: black;
+	color: var(--background-color);
+	font-size: 25px;
+	padding: 10px 25px;
+	border: none;
+}
+
