@@ -1,4 +1,5 @@
 const BUILD_DIR = "build";
+const INDEX_PLACEHOLDER = "%LINKS%";
 
 import config from "./config.js";
 
@@ -33,8 +34,22 @@ await Promise.all([
 
 		await fs.mkdir(path.join(BUILD_DIR, dirName));
 		await fs.copy(path.join("..", dirName, "build"), path.join(BUILD_DIR, dirName));
-	})
+	}),
+	(async () => {
+		await fs.copy("static/index", path.join(BUILD_DIR));
+
+
+		const indexTemplate = await fs.readFile("static/index-template.html", { encoding: "utf8" });
+		if (! indexTemplate.includes(INDEX_PLACEHOLDER)) {
+			throw new Error("Index template doesn't contain INDEX_PLACEHOLDER.");
+		}
+
+		const links = [...config.static, ...config.build];
+		const indexValue = `<ul>${links.map(dirName => `<li><a href="${dirName}/">${dirName}</a></li>`).join("\n")}</ul>`;
+		const newIndex = indexTemplate.replace(INDEX_PLACEHOLDER, indexValue);
+		
+		await fs.writeFile(path.join(BUILD_DIR, "index.html"), newIndex, { encoding: "utf8" }); 
+	})()
 ]);
-const links = [...config.static, ...config.build];
 
 console.log("Done");
