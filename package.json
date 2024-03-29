@@ -8,5 +8,5 @@
 	},
 	"type": "module",
 
-	"workspaces": ["Pages-Build-Test"]
+	"workspaces": ["Pages-Build-Test"] 
 }
