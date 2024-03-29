@@ -1,0 +1,13 @@
+{
+	"name": "site-builder",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "node index.js",
+		"updateWorkspace": "node updateWorkspace.js"
+	},
+	"type": "module",
+	"dependencies": {
+		"fs-extra": "^11.2.0"
+	}
+}
