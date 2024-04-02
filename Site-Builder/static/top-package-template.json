@@ -4,7 +4,8 @@
 	"name": "bootcamp-misc",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "cd Site-Builder && npm run build"
+		"build": "cd Site-Builder && npm run build",
+		"updateWorkspace": "cd Site-Builder && npm run updateWorkspace"
 	},
 	"type": "module",
 
