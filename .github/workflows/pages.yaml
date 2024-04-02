@@ -1,6 +1,7 @@
+# From https://github.com/hedgehog125/Bootcamp-Misc by Nicholas Clack
 # Credit: partly based on https://github.com/actions/starter-workflows/blob/main/pages/nextjs.yml
 
-name: Run Custom Build Script and Deploy to GitHub Pages
+name: GitHub Pages Custom Node.js Build
 
 on:
   push:
