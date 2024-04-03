@@ -4,10 +4,11 @@ const config = {
 		"HTML-And-CSS-Cheatsheet",
 		"Local-HTML",
 		"My-Company-London-CSS",
-		"Website-Design-System"
+		"Website-Design-System",
+		"Number-Guessing-Game",
 	],
 	build: [
-		"Pages-Build-Test"
+		"Pages-Build-Test",
 	]
 };
 export default config;
