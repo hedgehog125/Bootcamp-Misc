@@ -6,9 +6,8 @@ const config = {
 		"My-Company-London-CSS",
 		"Website-Design-System",
 		"Number-Guessing-Game",
+		"Average-XKCD-Colour",
 	],
-	build: [
-		"Pages-Build-Test",
-	]
+	build: ["Pages-Build-Test"],
 };
 export default config;
