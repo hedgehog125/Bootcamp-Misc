@@ -36,6 +36,7 @@ document.querySelector("#avgForm").addEventListener("submit", async (e) => {
 		total[i % 4] += imgData.data[i];
 	}
 
+	img.alt = res.alt;
 	const imgContainer = document.querySelector("#imageContainer");
 	imgContainer.innerHTML = "";
 	imgContainer.appendChild(img);
@@ -49,9 +50,8 @@ document.querySelector("#avgForm").addEventListener("submit", async (e) => {
 		.map((value) => Math.round(value / (imgData.data.length / 4)));
 
 	const rgb = `rgb(${avg.join(", ")})`;
-	const avgValEl = document.querySelector("#averageValue");
-	avgValEl.innerText = rgb;
-	avgValEl.style.color = rgb;
+	document.querySelector("#averageValue").innerText = rgb;
+	document.querySelector("#averageValueColor").style.backgroundColor = rgb;
 
 	document.querySelector("#output").hidden = false;
 	submitEl.disabled = false;
