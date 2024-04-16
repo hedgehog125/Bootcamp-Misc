@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Results Summary</title>
-</head>
-<body>
-	<main>
-		<section class="pane pane--type-result">
-			<p class="pane__header--type-result">Your Result</p>
-			<div class="pane__result-container--type-result">
-				<p class="pane__result--type--result">76</p>
-				<p class="pane__result-out-of--type--result">of 100</p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<title>Results Summary</title>
+	</head>
+	<body>
+		<main>
+			<div class="fullscreen-centered">
+				<div
+					class="pane-container pane-container--type-result-and-summary"
+				>
+					<section class="pane pane--type-result">
+						<h2 class="pane__header--type-result">Your Result</h2>
+						<div class="pane__result-container--type-result">
+							<p class="pane__result--type--result">76</p>
+							<p class="pane__result-out-of--type--result">
+								of 100
+							</p>
+						</div>
+						<p class="pane__adjective--type-result">Great</p>
+						<p class="pane__explanation--type-result">
+							You scored higher than 65% of the people who have
+							taken these tests.
+						</p>
+					</section>
+					<section class="pane pane--type-summary">
+						<h2 class="pane__header--type-summary">Summary</h2>
+						<ul class="pane__list--type-summary">
+							<li class="pane__list-item--type-summary">
+								<div
+									class="pane__list-item-container--type-summary"
+								>
+									<img
+										class="pane__list-icon--type-summary"
+										src="404"
+										width="1"
+										height="1"
+										alt=""
+									/>
+									<span
+										class="pane__result-category--type-summary"
+										>Reaction</span
+									>
+									<span class="pane__result--type-summary">
+										<strong
+											class="pane__result-points--type-summary"
+											>80</strong
+										>
+										/ 100
+									</span>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
 			</div>
-			<p class="pane__adjective--type-result">
-				Great
-			</p>
-			<p class="pane__explanation--type-result">
-				You scored higher than 65% of the people who have taken these tests.
-			</p>
-		</section>
-		<section class="pane pane--type-summary">
-			<!-- TODO -->
-		</section>
-	</main>
-</body>
+		</main>
+	</body>
 </html>

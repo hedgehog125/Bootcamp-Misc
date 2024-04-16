@@ -1,0 +1,34 @@
+* {
+	box-sizing: content-box;
+}
+
+.fullscreen-centered {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pane-container--type-result-and-summary {
+	--width: 600px;
+	display: flex;
+	width: var(--width);
+	height: calc(var(--width) / 1.45);
+
+	/* TODO: should be a gradient, but that's complicated */
+	box-shadow: 0px 20px 30px 30px rgba(0, 0, 150, 0.075);
+	border-radius: 20px;
+}
+.pane {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+}
+.pane--type-result {
+	background-color: #503af0;
+	border-radius: 20px;
+}
