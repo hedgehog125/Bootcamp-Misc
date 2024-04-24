@@ -1,0 +1,14 @@
+footer .contact {
+	height: 200px;
+
+	padding: 10px 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+footer a {
+	display: block;
+	text-decoration: none;
+	color: var(--color-text);
+	font-weight: bold;
+}
