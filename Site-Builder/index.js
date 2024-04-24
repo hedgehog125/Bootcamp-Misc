@@ -12,20 +12,14 @@ import { fileURLToPath } from "url";
 const exec = promisify(execCallback);
 process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
-console.log("Clearing build...");
-const clearPromise = fs.emptyDir(BUILD_DIR);
-clearPromise.then(() => {
-	console.log(`Cleared ${BUILD_DIR}`);
-});
-await clearPromise;
+await fs.emptyDir(BUILD_DIR);
 
 console.log("Building...");
 
 await Promise.all([
 	...config.static.map(async (dirName) => {
-		console.log(`Making ${dirName}`);
+		await fs.stat(BUILD_DIR);
 		await fs.mkdir(path.join(BUILD_DIR, dirName));
-		console.log(`Made ${dirName}`);
 		await fs.copy(path.join("..", dirName), path.join(BUILD_DIR, dirName));
 	}),
 	...config.build.map(async (dirName) => {
@@ -38,9 +32,8 @@ await Promise.all([
 			throw new Error(`${dirName} build failed. Error:\n${stderr}`);
 		}
 
-		console.log(`Making ${dirName}`);
+		await fs.stat(BUILD_DIR);
 		await fs.mkdir(path.join(BUILD_DIR, dirName));
-		console.log(`Made ${dirName}`);
 		await fs.copy(
 			path.join("..", dirName, "build"),
 			path.join(BUILD_DIR, dirName)
