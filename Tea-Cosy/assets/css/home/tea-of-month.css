@@ -1,6 +1,10 @@
 .tea-of-month {
 	width: 1000px;
 }
+.tea-of-month h3 {
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
 .tea-of-month-items {
 	display: flex;
 	justify-content: center;
@@ -12,4 +16,7 @@
 	height: 200px;
 	display: block;
 	margin-bottom: 10px;
+}
+.tea-of-month-items figcaption {
+	font-weight: bold;
 }

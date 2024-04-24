@@ -13,4 +13,8 @@
 .hero > div {
 	background-color: var(--color-background);
 	opacity: 1;
+	padding: 10px 0px;
+}
+.hero p {
+	font-weight: bold;
 }

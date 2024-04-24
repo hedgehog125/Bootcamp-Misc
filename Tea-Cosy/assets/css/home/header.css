@@ -6,6 +6,7 @@ header {
 
 	padding: 10px;
 	background-color: inherit;
+	opacity: 0.9;
 	border-bottom: 1px solid var(--color-text);
 
 	display: flex;
@@ -23,4 +24,5 @@ header nav {
 }
 header nav a {
 	color: var(--color-text);
+	font-size: 22px;
 }
