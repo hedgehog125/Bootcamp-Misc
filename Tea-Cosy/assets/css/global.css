@@ -7,6 +7,7 @@
 	--color-background: black;
 	--color-text: seashell;
 	--default-font: Helvetica, sans-serif;
+	--header-height: 69px;
 }
 html {
 	font-size: 22px;
@@ -16,8 +17,21 @@ body {
 	color: var(--color-text);
 	font-family: var(--default-font);
 	font-size: 1rem;
+	text-align: center;
 }
 body * {
 	/* Was in the design for some reason */
 	opacity: 0.9;
+}
+
+main,
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+img {
+	width: 20px;
+	height: 20px;
 }
