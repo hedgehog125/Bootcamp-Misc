@@ -12,3 +12,9 @@ footer a {
 	color: var(--color-text);
 	font-weight: bold;
 }
+footer .copyright {
+	padding-left: 20px;
+	text-align: left;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
