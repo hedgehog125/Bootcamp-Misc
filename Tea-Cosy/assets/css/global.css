@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--color-background: black;
+	--color-text: seashell;
+	--default-font: Helvetica, sans-serif;
+}
+html {
+	font-size: 22px;
+}
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--default-font);
+	font-size: 1rem;
+}
+body * {
+	/* Was in the design for some reason */
+	opacity: 0.9;
+}
