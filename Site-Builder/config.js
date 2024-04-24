@@ -7,6 +7,7 @@ const config = {
 		"Website-Design-System",
 		"Number-Guessing-Game",
 		"Average-XKCD-Colour",
+		"Tea-Cosy",
 	],
 	build: ["Pages-Build-Test"],
 };
