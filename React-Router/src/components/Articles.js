@@ -5,6 +5,7 @@ import {
 	filterArticles,
 } from "../features/articles/articlesSlice";
 import Search from "./Search";
+import { Link } from "react-router-dom";
 
 // Import Link and useSearchParams from React Router
 
@@ -26,8 +27,7 @@ export default function Articles() {
 			<ul>
 				{filteredArticles.map((article) => (
 					<li key={article.slug}>
-						{/* Replace these a tags! */}
-						<a href={`${article.slug}`}>{article.title}</a>
+						<Link to={`${article.slug}`}>{article.title}</Link>
 					</li>
 				))}
 			</ul>
