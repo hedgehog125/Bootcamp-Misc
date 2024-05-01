@@ -3,13 +3,11 @@ const INDEX_PLACEHOLDER = "%LINKS%";
 
 import config from "./config.js";
 
-import { exec as execCallback } from "child_process";
-import { promisify } from "util";
+import { exec } from "child_process";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
 
-const exec = promisify(execCallback);
 process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
 await fs.emptyDir(BUILD_DIR);
@@ -23,11 +21,19 @@ await Promise.all([
 		await fs.copy(path.join("..", dirName), path.join(BUILD_DIR, dirName));
 	}),
 	...config.build.map(async (dirName) => {
-		const { stderr } = await exec("npm run build", {
-			cwd: path.join("..", dirName),
+		const error = await new Promise((resolve) => {
+			exec(
+				"npm run build",
+				{
+					cwd: path.join("..", dirName),
+				},
+				(error, stdout, stderr) => {
+					resolve(stderr || error);
+				}
+			);
 		});
-		if (stderr != "") {
-			throw new Error(`${dirName} build failed. Error:\n${stderr}`);
+		if (error) {
+			throw new Error(`${dirName} build failed. Error:\n${error}`);
 		}
 
 		await fs.stat(BUILD_DIR);
