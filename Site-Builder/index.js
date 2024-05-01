@@ -21,19 +21,21 @@ await Promise.all([
 		await fs.copy(path.join("..", dirName), path.join(BUILD_DIR, dirName));
 	}),
 	...config.build.map(async (dirName) => {
-		const error = await new Promise((resolve) => {
+		const [error, output] = await new Promise((resolve) => {
 			exec(
 				"npm run build",
 				{
 					cwd: path.join("..", dirName),
 				},
 				(error, stdout, stderr) => {
-					resolve(stderr || error);
+					resolve([stderr || error, stdout]);
 				}
 			);
 		});
 		if (error) {
-			throw new Error(`${dirName} build failed. Error:\n${error}`);
+			throw new Error(
+				`${dirName} build failed. Error:\n${error}\nOutput:${output}`
+			);
 		}
 
 		await fs.stat(BUILD_DIR);
