@@ -23,11 +23,9 @@ await Promise.all([
 		await fs.copy(path.join("..", dirName), path.join(BUILD_DIR, dirName));
 	}),
 	...config.build.map(async (dirName) => {
-		const cwd = process.cwd();
-		process.chdir(path.join("..", dirName));
-		const buildTask = exec("npm run build");
-		process.chdir(cwd);
-		const { stderr } = await buildTask;
+		const { stderr } = await exec("npm run build", {
+			cwd: path.join("..", dirName),
+		});
 		if (stderr != "") {
 			throw new Error(`${dirName} build failed. Error:\n${stderr}`);
 		}
