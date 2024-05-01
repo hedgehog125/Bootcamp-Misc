@@ -14,6 +14,7 @@ process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
 await fs.emptyDir(BUILD_DIR);
 
+console.log(process.env.NODE_ENV);
 console.log("Building...");
 
 await Promise.all([
