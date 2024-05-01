@@ -9,6 +9,11 @@ const config = {
 		"Average-XKCD-Colour",
 		"Tea-Cosy",
 	],
-	build: ["Pages-Build-Test", "Local-React", "React-Router"],
+	build: [
+		"Pages-Build-Test",
+		"Local-React",
+		"React-Router",
+		"React-Playground",
+	],
 };
 export default config;
