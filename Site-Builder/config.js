@@ -9,6 +9,6 @@ const config = {
 		"Average-XKCD-Colour",
 		"Tea-Cosy",
 	],
-	build: ["Pages-Build-Test"],
+	build: ["Pages-Build-Test", "Local-React"],
 };
 export default config;
