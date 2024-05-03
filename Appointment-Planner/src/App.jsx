@@ -14,9 +14,12 @@ function App() {
 	const [contacts, setContacts] = useState([]);
 	const [appointments, setAppointments] = useState([]);
 
+	const basename =
+		document.querySelector("base")?.getAttribute("href") ?? "/";
+
 	const router = createBrowserRouter(
 		createRoutesFromElements(
-			<Route path="" element={<Root />}>
+			<Route path="/" element={<Root />}>
 				<Route
 					index
 					element={<Navigate to={ROUTES.CONTACTS} replace />}
@@ -35,7 +38,8 @@ function App() {
 					element={<AppointmentsPage appointments={appointments} />}
 				/>
 			</Route>
-		)
+		),
+		{ basename }
 	);
 
 	return <RouterProvider router={router} />;
