@@ -10,6 +10,7 @@ export function ContactForm({ onSubmit }) {
 			<label>
 				Name:
 				<input
+					required
 					type="text"
 					name="name"
 					value={nameInput}
@@ -20,6 +21,7 @@ export function ContactForm({ onSubmit }) {
 			<label>
 				Phone Number:
 				<input
+					required
 					type="tel"
 					name="phone-number"
 					value={phoneNumInput}
@@ -30,6 +32,7 @@ export function ContactForm({ onSubmit }) {
 			<label>
 				Email:
 				<input
+					required
 					type="email"
 					name="email"
 					value={emailInput}

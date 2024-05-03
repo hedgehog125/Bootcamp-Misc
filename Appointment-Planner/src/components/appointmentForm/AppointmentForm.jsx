@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ContactPicker } from "../contactPicker/ContactPicker";
 
 export function getTodayString() {
 	const [month, day, year] = new Date()
@@ -7,16 +8,18 @@ export function getTodayString() {
 	return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 }
 
-export function AppointmentForm({ onSubmit }) {
+export function AppointmentForm({ contacts, onSubmit }) {
 	const [nameInput, setNameInput] = useState("");
-	const [dateInput, setDateInput] = useState(getTodayString());
+	const [dateInput, setDateInput] = useState("");
 	const [timeInput, setTimeInput] = useState("");
+	const [contactInput, setContactInput] = useState("");
 
 	return (
 		<form action="#" onSubmit={handleSubmit}>
 			<label>
 				Name:
 				<input
+					required
 					type="text"
 					name="name"
 					value={nameInput}
@@ -27,8 +30,10 @@ export function AppointmentForm({ onSubmit }) {
 			<label>
 				Date:
 				<input
+					required
 					type="date"
 					name="date"
+					min={getTodayString()}
 					value={dateInput}
 					onChange={({ target }) => setDateInput(target.value)}
 				/>
@@ -37,12 +42,19 @@ export function AppointmentForm({ onSubmit }) {
 			<label>
 				Time:
 				<input
+					required
 					type="time"
 					name="time"
 					value={timeInput}
 					onChange={({ target }) => setTimeInput(target.value)}
 				/>
 			</label>
+			<br />
+			<ContactPicker
+				contacts={contacts}
+				value={contactInput}
+				onChange={({ target }) => setContactInput(target.value)}
+			/>
 			<br />
 			<button type="submit">Submit</button>
 		</form>
@@ -55,6 +67,7 @@ export function AppointmentForm({ onSubmit }) {
 			name: nameInput,
 			date: dateInput,
 			time: timeInput,
+			contactID: contactInput === "" ? -1 : parseInt(contactInput),
 		});
 
 		setNameInput("");

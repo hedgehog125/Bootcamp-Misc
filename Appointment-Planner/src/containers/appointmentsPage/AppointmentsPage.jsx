@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export function AppointmentsPage({ onSubmit }) {
+export function AppointmentsPage({ appointments, contacts, onSubmit }) {
 	return (
 		<div>
 			<section>
 				<h2>Add Appointment</h2>
-				<AppointmentForm onSubmit={onSubmit} />
+				<AppointmentForm onSubmit={onSubmit} contacts={contacts} />
 			</section>
 			<hr />
 			<section>
