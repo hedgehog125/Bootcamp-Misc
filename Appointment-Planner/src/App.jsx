@@ -35,7 +35,12 @@ function App() {
 				/>
 				<Route
 					path={ROUTES.APPOINTMENTS}
-					element={<AppointmentsPage appointments={appointments} />}
+					element={
+						<AppointmentsPage
+							appointments={appointments}
+							onSubmit={addAppointment}
+						/>
+					}
 				/>
 			</Route>
 		),
@@ -58,6 +63,9 @@ function App() {
 		setContacts([...contacts, contact]);
 
 		return true;
+	}
+	function addAppointment(appointment) {
+		setAppointments([...appointments, appointment]);
 	}
 }
 

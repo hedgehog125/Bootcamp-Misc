@@ -3,16 +3,12 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export function AppointmentsPage() {
-	/*
-	Define state variables for 
-	appointment info
-	*/
-
+export function AppointmentsPage({ onSubmit }) {
 	return (
 		<div>
 			<section>
 				<h2>Add Appointment</h2>
+				<AppointmentForm onSubmit={onSubmit} />
 			</section>
 			<hr />
 			<section>
@@ -20,11 +16,4 @@ export function AppointmentsPage() {
 			</section>
 		</div>
 	);
-
-	function handleSubmit(e) {
-		e.preventDefault();
-		/*
-		Add contact info and clear data  
-		*/
-	}
 }
