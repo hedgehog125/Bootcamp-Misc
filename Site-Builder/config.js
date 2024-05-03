@@ -14,6 +14,7 @@ const config = {
 		"Local-React",
 		"React-Router",
 		"React-Playground",
+		"Appointment-Planner",
 	],
 };
 export default config;
