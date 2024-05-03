@@ -51,14 +51,7 @@ function App() {
 	return <RouterProvider router={router} />;
 
 	function addContact(contact) {
-		const isUnique = contacts.every(
-			({ name, phoneNum, email }) =>
-				!(
-					contact.name === name ||
-					contact.phoneNum === phoneNum ||
-					contact.email === email
-				)
-		);
+		const isUnique = contacts.every(({ name }) => contact.name !== name);
 		if (!isUnique) return false;
 
 		setContacts([...contacts, contact]);
