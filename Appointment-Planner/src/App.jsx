@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	RouterProvider,
 	createBrowserRouter,
@@ -11,15 +11,8 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-	/*
-	Define state variables for 
-	contacts and appointments 
-	*/
-
-	/*
-	Implement functions to add data to
-	contacts and appointments
-	*/
+	const [contacts, setContacts] = useState([]);
+	const [appointments, setAppointments] = useState([]);
 
 	const router = createBrowserRouter(
 		createRoutesFromElements(
@@ -30,19 +23,38 @@ function App() {
 				/>
 				<Route
 					path={ROUTES.CONTACTS}
-					element={<ContactsPage /> /* Add props to ContactsPage */}
+					element={
+						<ContactsPage
+							contacts={contacts}
+							onSubmit={addContact}
+						/>
+					}
 				/>
 				<Route
 					path={ROUTES.APPOINTMENTS}
-					element={
-						<AppointmentsPage /> /* Add props to AppointmentsPage */
-					}
+					element={<AppointmentsPage appointments={appointments} />}
 				/>
 			</Route>
 		)
 	);
 
 	return <RouterProvider router={router} />;
+
+	function addContact(contact) {
+		const isUnique = contacts.every(
+			({ name, phoneNum, email }) =>
+				!(
+					contact.name === name ||
+					contact.phoneNum === phoneNum ||
+					contact.email === email
+				)
+		);
+		if (!isUnique) return false;
+
+		setContacts([...contacts, contact]);
+
+		return true;
+	}
 }
 
 export default App;
