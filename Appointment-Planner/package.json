@@ -16,6 +16,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "cross-env CI=\"\" react-scripts build",
+		"buildLocal": "cross-env CI=\"\" PUBLIC_URL=/ react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
