@@ -1,5 +1,14 @@
 import React from "react";
 
-export function Tile() {
-	return <div className="tile-container"></div>;
+export function Tile({ name, description }) {
+	return (
+		<div className="tile-container">
+			<p className="tile-title">{name}</p>
+			{Object.values(description).map((value, index) => (
+				<p className="tile" key={index}>
+					{value}
+				</p>
+			))}
+		</div>
+	);
 }
