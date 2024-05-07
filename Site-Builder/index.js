@@ -28,6 +28,7 @@ await Promise.all([
 				{
 					cwd: path.join("..", dirName),
 					env: {
+						...process.env,
 						PUBLIC_URL: `${process.env.PUBLIC_URL}/${dirName}/`,
 					},
 				},
