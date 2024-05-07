@@ -47,7 +47,7 @@ jobs:
       - name: Build GitHub Pages
         run: npm run build
         env:
-          PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
+          PUBLIC_URL: /Bootcamp-Misc
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
