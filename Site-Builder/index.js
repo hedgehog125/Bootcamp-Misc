@@ -12,6 +12,7 @@ process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
 await fs.emptyDir(BUILD_DIR);
 
+console.log(process.env.PUBLIC_URL);
 console.log("Building...");
 
 await Promise.all([
@@ -26,6 +27,9 @@ await Promise.all([
 				"npm run build",
 				{
 					cwd: path.join("..", dirName),
+					env: {
+						PUBLIC_URL: `${process.env.PUBLIC_URL}/${dirName}/`,
+					},
 				},
 				(error, stdout, stderr) => {
 					resolve([stderr || error, stdout]);
