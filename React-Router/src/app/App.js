@@ -37,9 +37,9 @@ const router = createBrowserRouter(
 				</Route>
 				<Route path="authors/:name" element={<Author />}></Route>
 			</Route>
-		</>,
-		{ basename }
-	)
+		</>
+	),
+	{ basename }
 );
 
 function App() {
