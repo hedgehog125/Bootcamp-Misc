@@ -12,7 +12,7 @@ process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
 await fs.emptyDir(BUILD_DIR);
 
-console.log(process.env.PUBLIC_URL);
+console.log(`PUBLIC URL: process.env.PUBLIC_URL`);
 console.log("Building...");
 
 await Promise.all([
