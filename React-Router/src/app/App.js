@@ -19,6 +19,7 @@ import Root from "../components/Root";
 
 import "./App.css";
 
+const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
@@ -36,7 +37,8 @@ const router = createBrowserRouter(
 				</Route>
 				<Route path="authors/:name" element={<Author />}></Route>
 			</Route>
-		</>
+		</>,
+		{ basename }
 	)
 );
 
