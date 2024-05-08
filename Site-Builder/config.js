@@ -16,6 +16,8 @@ const config = {
 		"React-Playground",
 		"Appointment-Planner",
 		"Adopt-A-Pet",
+		"Products-Page",
+		"React-Router-Starter",
 	],
 };
 export default config;

@@ -9,5 +9,5 @@
 	},
 	"type": "module",
 
-	"workspaces": ["Pages-Build-Test","Local-React","React-Router","React-Playground","Appointment-Planner","Adopt-A-Pet"]
+	"workspaces": ["Pages-Build-Test","Local-React","React-Router","React-Playground","Appointment-Planner","Adopt-A-Pet","Products-Page","React-Router-Starter"]
 }
