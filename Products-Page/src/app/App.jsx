@@ -8,6 +8,7 @@ import {
 
 import Root from "../pages/Root";
 import Home from "../pages/Home/Home";
+import Products from "../pages/Products/Products";
 
 const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
 		<>
 			<Route path="/" element={<Root />}>
 				<Route path="" element={<Home />}></Route>
+				<Route path="/products/" element={<Products />}></Route>
 			</Route>
 		</>
 	),
