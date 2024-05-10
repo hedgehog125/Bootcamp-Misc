@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import Root from "./components/Root";
 
-const basename = process.env.PUBLIC_URL ?? "/";
+const basename = import.meta.env.PUBLIC_URL ?? "/";
+console.log(import.meta.env.PUBLIC_URL);
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
