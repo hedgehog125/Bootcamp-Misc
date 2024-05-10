@@ -18,6 +18,7 @@ const config = {
 		"Adopt-A-Pet",
 		"Products-Page",
 		"React-Router-Starter",
+		"Vite-React-Starter",
 	],
 };
 export default config;
