@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import Root from "./components/Root";
 
-const basename = import.meta.env.PUBLIC_URL ?? "/";
-console.log(import.meta.env.PUBLIC_URL);
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
@@ -17,7 +15,7 @@ const router = createBrowserRouter(
 			</Route>
 		</>
 	),
-	{ basename }
+	{ basename: import.meta.env.BASE_URL }
 );
 
 function App() {

@@ -29,10 +29,20 @@ await Promise.all([
 					cwd: path.join("..", dirName),
 					env: {
 						...process.env,
-						PUBLIC_URL: `${process.env.PUBLIC_URL}/${dirName}/`,
+						PUBLIC_URL: `${
+							process.env.PUBLIC_URL ?? ""
+						}/${dirName}/`,
 					},
 				},
 				(error, stdout, stderr) => {
+					if (process.env.OUTPUT_BUILD_LOGS === "true") {
+						if (stdout !== "") {
+							console.log(
+								`${dirName} logged to the console:\n${stdout}\n------------------------------\n`
+							);
+						}
+					}
+
 					resolve([stderr || error, stdout]);
 				}
 			);

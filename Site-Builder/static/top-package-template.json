@@ -5,6 +5,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build": "cd Site-Builder && npm run build",
+		"debugBuild": "cd Site-Builder && npm run debugBuild",
 		"updateWorkspace": "cd Site-Builder && npm run updateWorkspace"
 	},
 	"type": "module",
