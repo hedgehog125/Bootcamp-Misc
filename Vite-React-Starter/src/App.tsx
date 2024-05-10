@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Root from "./components/Root";
 
-const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
+const basename = process.env.PUBLIC_URL ?? "/";
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
