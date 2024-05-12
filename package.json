@@ -9,6 +9,10 @@
 		"updateWorkspace": "cd Site-Builder && npm run updateWorkspace"
 	},
 	"type": "module",
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
+		"prettier": "^3.2.5"
+	},
 
 	"workspaces": ["Pages-Build-Test","Local-React","React-Router","React-Playground","Appointment-Planner","Adopt-A-Pet","Products-Page","React-Router-Starter","Vite-React-Starter"]
 }

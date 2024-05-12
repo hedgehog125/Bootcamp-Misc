@@ -6,9 +6,14 @@
 	"scripts": {
 		"build": "cd Site-Builder && npm run build",
 		"debugBuild": "cd Site-Builder && npm run debugBuild",
-		"updateWorkspace": "cd Site-Builder && npm run updateWorkspace"
+		"updateWorkspace": "cd Site-Builder && npm run updateWorkspace",
+		"format": "prettier --write ."
 	},
 	"type": "module",
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
+		"prettier": "^3.2.5"
+	},
 
 	"workspaces": "PLACEHOLDER"
 }
