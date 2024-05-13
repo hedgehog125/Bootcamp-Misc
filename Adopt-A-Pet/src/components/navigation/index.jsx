@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import { getPetTypes } from "../../api/petfinder.js";
+import { getPetTypes } from "../../api/petfinder/index.js";
 
 import Logo from "../../assets/logo.svg";
 
@@ -50,7 +50,7 @@ function Navigation() {
 									{type.name}s
 								</NavLink>
 							</li>
-						))
+					  ))
 					: "Loading..."}
 			</ul>
 		</nav>

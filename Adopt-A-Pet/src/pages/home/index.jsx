@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { getPets } from "../../api/petfinder.js";
+import { getPets } from "../../api/petfinder/index.js";
 
 import Hero from "../../components/hero";
 
