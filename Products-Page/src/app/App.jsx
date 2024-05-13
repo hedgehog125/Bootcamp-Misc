@@ -6,9 +6,9 @@ import {
 	createRoutesFromElements,
 } from "react-router-dom";
 
-import Root from "../pages/Root";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
+import Root from "../pages/Root";
 
 const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
 const router = createBrowserRouter(
@@ -18,9 +18,9 @@ const router = createBrowserRouter(
 				<Route path="" element={<Home />}></Route>
 				<Route path="/products/" element={<Products />}></Route>
 			</Route>
-		</>
+		</>,
 	),
-	{ basename }
+	{ basename },
 );
 
 function App() {

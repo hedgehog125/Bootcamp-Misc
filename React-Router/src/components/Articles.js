@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link, useSearchParams } from "react-router-dom";
+
 import {
 	selectArticles,
 	filterArticles,
-} from "../features/articles/articlesSlice";
+} from "../features/articles/articlesSlice.js";
+
 import Search from "./Search";
-import { Link, useSearchParams } from "react-router-dom";
 
 // Import Link and useSearchParams from React Router
 

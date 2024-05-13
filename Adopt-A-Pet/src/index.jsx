@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+import reportWebVitals from "./reportWebVitals.js";
+
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
 const { worker } = require("./mocks/browser");
 worker.start();

@@ -7,15 +7,15 @@ import {
 } from "react-router-dom";
 
 import About from "../components/About";
-import SignUp from "../components/SignUp";
-import Articles from "../components/Articles";
 import Article from "../components/Article";
+import Articles from "../components/Articles";
+import Author from "../components/Author";
 import Categories from "../components/Categories";
 import Category from "../components/Category";
-import Author from "../components/Author";
-import Profile from "../components/Profile";
 import EditProfileForm from "../components/EditProfileForm";
+import Profile from "../components/Profile";
 import Root from "../components/Root";
+import SignUp from "../components/SignUp";
 
 import "./App.css";
 
@@ -37,9 +37,9 @@ const router = createBrowserRouter(
 				</Route>
 				<Route path="authors/:name" element={<Author />}></Route>
 			</Route>
-		</>
+		</>,
 	),
-	{ basename }
+	{ basename },
 );
 
 function App() {

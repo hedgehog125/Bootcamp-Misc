@@ -4,6 +4,7 @@ import {
 	createBrowserRouter,
 	createRoutesFromElements,
 } from "react-router-dom";
+
 import Root from "./components/Root";
 
 const router = createBrowserRouter(
@@ -12,9 +13,9 @@ const router = createBrowserRouter(
 			<Route path="/" element={<Root />}>
 				<Route path="" element={<h1>There's nothing here</h1>}></Route>
 			</Route>
-		</>
+		</>,
 	),
-	{ basename: import.meta.env.BASE_URL }
+	{ basename: import.meta.env.BASE_URL },
 );
 
 function App() {

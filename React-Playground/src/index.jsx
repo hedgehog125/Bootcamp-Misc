@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./assets/css/index.css";
-import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import reportWebVitals from "./reportWebVitals.js";
+
 import routes from "./routes";
+
+import "./assets/css/index.css";
 
 const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
 const router = createBrowserRouter(routes, { basename });
@@ -12,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
-	</React.StrictMode>
+	</React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

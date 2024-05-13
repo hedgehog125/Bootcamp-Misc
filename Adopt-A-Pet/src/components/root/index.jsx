@@ -1,6 +1,7 @@
 import React from "react";
-import Navigation from "../navigation";
 import { Outlet } from "react-router-dom";
+
+import Navigation from "../navigation";
 
 function Root() {
 	return (

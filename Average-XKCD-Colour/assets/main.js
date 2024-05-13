@@ -41,9 +41,8 @@ document.querySelector("#avgForm").addEventListener("submit", async (e) => {
 	imgContainer.innerHTML = "";
 	imgContainer.appendChild(img);
 
-	document.querySelector(
-		"#averageSentence"
-	).innerText = `The average colour is `;
+	document.querySelector("#averageSentence").innerText =
+		`The average colour is `;
 
 	const avg = total
 		.slice(0, 3)

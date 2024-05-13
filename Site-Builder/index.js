@@ -1,12 +1,12 @@
-const BUILD_DIR = "build";
-const INDEX_PLACEHOLDER = "%LINKS%";
-
-import config from "./config.js";
-
 import { exec } from "child_process";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
+
+import config from "./config.js";
+
+const BUILD_DIR = "build";
+const INDEX_PLACEHOLDER = "%LINKS%";
 
 process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
@@ -38,18 +38,18 @@ await Promise.all([
 					if (process.env.OUTPUT_BUILD_LOGS === "true") {
 						if (stdout !== "") {
 							console.log(
-								`${dirName} logged to the console:\n${stdout}\n------------------------------\n`
+								`${dirName} logged to the console:\n${stdout}\n------------------------------\n`,
 							);
 						}
 					}
 
 					resolve([stderr || error, stdout]);
-				}
+				},
 			);
 		});
 		if (error) {
 			throw new Error(
-				`${dirName} build failed. Error:\n${error}\nOutput:${output}`
+				`${dirName} build failed. Error:\n${error}\nOutput:${output}`,
 			);
 		}
 
@@ -57,7 +57,7 @@ await Promise.all([
 		await fs.mkdir(path.join(BUILD_DIR, dirName));
 		await fs.copy(
 			path.join("..", dirName, "build"),
-			path.join(BUILD_DIR, dirName)
+			path.join(BUILD_DIR, dirName),
 		);
 	}),
 	(async () => {
@@ -68,7 +68,7 @@ await Promise.all([
 		});
 		if (!indexTemplate.includes(INDEX_PLACEHOLDER)) {
 			throw new Error(
-				"Index template doesn't contain INDEX_PLACEHOLDER."
+				"Index template doesn't contain INDEX_PLACEHOLDER.",
 			);
 		}
 

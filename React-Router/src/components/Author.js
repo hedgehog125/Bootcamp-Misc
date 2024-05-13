@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectAuthors } from "../features/authors/authorsSlice";
 import { Link, useParams } from "react-router-dom";
+
+import { selectAuthors } from "../features/authors/authorsSlice.js";
 
 export default function Author() {
 	const { name } = useParams();

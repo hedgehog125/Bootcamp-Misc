@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getPetTypes } from "../../api/petfinder";
-import Logo from "../../assets/logo.svg";
-import Search from "../search";
 import { NavLink } from "react-router-dom";
+
+import { getPetTypes } from "../../api/petfinder.js";
+
+import Logo from "../../assets/logo.svg";
+
+import Search from "../search";
 
 // Import NavLink
 
@@ -47,7 +50,7 @@ function Navigation() {
 									{type.name}s
 								</NavLink>
 							</li>
-					  ))
+						))
 					: "Loading..."}
 			</ul>
 		</nav>

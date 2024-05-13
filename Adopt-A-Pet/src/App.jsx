@@ -1,14 +1,15 @@
-import HomePage from "./pages/home";
-import SearchPage from "./pages/search";
-import PetDetailsPage from "./pages/detail";
-import PetDetailsNotFound from "./pages/petDetailsNotFound";
-import Root from "./components/root";
 import {
 	Route,
 	RouterProvider,
 	createBrowserRouter,
 	createRoutesFromElements,
 } from "react-router-dom";
+
+import Root from "./components/root";
+import PetDetailsPage from "./pages/detail";
+import HomePage from "./pages/home";
+import PetDetailsNotFound from "./pages/petDetailsNotFound";
+import SearchPage from "./pages/search";
 
 const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
 const router = createBrowserRouter(
@@ -22,9 +23,9 @@ const router = createBrowserRouter(
 				path="/pet-details-not-found"
 				element={<PetDetailsNotFound />}
 			/>
-		</Route>
+		</Route>,
 	),
-	{ basename }
+	{ basename },
 );
 
 function App() {

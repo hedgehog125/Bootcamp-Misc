@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AUTHORS } from "../../app/data";
+
+import { AUTHORS } from "../../app/data.js";
 
 export const authorsSlice = createSlice({
 	name: "authors",

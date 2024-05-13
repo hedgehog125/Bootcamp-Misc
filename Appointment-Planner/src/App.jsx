@@ -6,6 +6,7 @@ import {
 	Route,
 	Navigate,
 } from "react-router-dom";
+
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
@@ -43,9 +44,9 @@ function App() {
 						/>
 					}
 				/>
-			</Route>
+			</Route>,
 		),
-		{ basename }
+		{ basename },
 	);
 
 	return <RouterProvider router={router} />;

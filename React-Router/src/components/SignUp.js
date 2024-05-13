@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { signUp } from "../features/session/sessionSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import { signUp } from "../features/session/sessionSlice.js";
+
 // import useNavigate
 
 export default function SignUp() {

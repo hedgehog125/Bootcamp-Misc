@@ -7,7 +7,7 @@ export function ContactsPage({ contacts, onSubmit }) {
 	const tileItems = contacts.map((contact) => ({
 		name: contact.name,
 		description: Object.fromEntries(
-			Object.entries(contact).filter(([key]) => key !== "name")
+			Object.entries(contact).filter(([key]) => key !== "name"),
 		),
 	}));
 

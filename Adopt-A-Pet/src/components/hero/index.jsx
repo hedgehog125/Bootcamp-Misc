@@ -9,8 +9,7 @@ function Hero({ image, displayText }) {
 			style={{
 				backgroundImage: `linear-gradient(black, black), url("${
 					image || "pets-hero.png"
-				}")
-          `,
+				}")`,
 				backgroundBlendMode: "saturation",
 				backgroundSize: "cover",
 				backgroundColor: "#0000008f",

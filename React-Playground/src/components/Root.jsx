@@ -1,8 +1,9 @@
-import styles from "./Root.module.css";
-import SiteHeader from "./SiteHeader";
-import SiteNav from "./SiteNav";
 import MainContent from "./MainContent";
 import SiteFooter from "./SiteFooter";
+import SiteHeader from "./SiteHeader";
+import SiteNav from "./SiteNav";
+
+import styles from "./Root.module.css";
 
 function Root() {
 	return (

@@ -1,41 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>100% Width Experiment</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>100% Width Experiment</title>
 
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-		.outer {
-			width: 500px;
-			height: 500px;
-			background-color: blue;
-			
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 5px solid lime;
-		}
-		.inner {
-			margin: 0;
-			padding: 20px;
-			width: 100%;
-			height: 50%;
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			.outer {
+				width: 500px;
+				height: 500px;
+				background-color: blue;
 
-			background-color: red;
-		}
-	</style>
-</head>
-<body>
-	<p>
-		Results: Using 100% width on a child element with padding that's in a div behaves as expected: the width is reduced to allow room for the padding. That is assuming you're using box-sizing: border-box.
-	</p>
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 5px solid lime;
+			}
+			.inner {
+				margin: 0;
+				padding: 20px;
+				width: 100%;
+				height: 50%;
 
-	<div class="outer">
-		<div class="inner"></div>
-	</div>
-</body>
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			Results: Using 100% width on a child element with padding that's in a div
+			behaves as expected: the width is reduced to allow room for the padding.
+			That is assuming you're using box-sizing: border-box.
+		</p>
+
+		<div class="outer">
+			<div class="inner"></div>
+		</div>
+	</body>
 </html>

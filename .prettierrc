@@ -9,6 +9,15 @@
 			}
 		}
 	],
-	"importOrder": ["<THIRD_PARTY_MODULES>", "^[./]"],
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"\\.(js|ts)$",
+		"\\.(json)$",
+		"\\.(jsx|tsx|vue|svelte)$",
+		"\\.(jpg|jpeg|png|webp|avif|svg|ico)$",
+		"^(?:\\.\\/|\\.\\.\\/|\\/|\\$)(?!.*((\\.js|\\.ts|\\.jsx|\\.tsx|\\.vue|\\.svelte|\\.json|\\.jpg|\\.jpeg|\\.png|\\.webp|\\.avif|\\.svg|\\.ico|\\.css))$)",
+		"\\.(css)$"
+	],
 	"importOrderSeparation": true
 }

@@ -27,7 +27,7 @@ body {
 	align-items: center;
 }
 
-.title-image>img {
+.title-image > img {
 	width: 50%;
 	height: auto;
 	padding: 75px 0px;
@@ -84,10 +84,7 @@ main {
 	flex-flow: row wrap;
 
 	align-items: flex-start;
-
 }
-
-
 
 section {
 	width: 75%;
@@ -178,32 +175,28 @@ button.standard-button {
 	width: fit-content;
 }
 #picture img {
-	
 	height: auto;
 	display: block;
 }
 
 #loremipsum {
 	margin-left: auto;
-	
-	
 }
 #loremipsum div {
 	display: flex;
 }
 
 #loremipsum div p {
-	padding: 0 20px;;
+	padding: 0 20px;
 }
 
 #dolor {
 	background-color: var(--section-background-color);
 }
 
-@media screen and  (max-width: 920px) {
+@media screen and (max-width: 920px) {
 	body {
 		margin: auto;
-		
 	}
 	#picture img {
 		width: 100%;
@@ -213,12 +206,10 @@ button.standard-button {
 	#Map p {
 		font-size: 15px;
 	}
-
 }
-@media screen and  (min-width: 920px)  and (max-width:1500px){
+@media screen and (min-width: 920px) and (max-width: 1500px) {
 	#picture img {
 		width: 100%;
 		height: 100%;
 	}
-
 }

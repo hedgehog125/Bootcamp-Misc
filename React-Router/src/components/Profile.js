@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, Navigate, Outlet } from "react-router-dom";
+
 import {
 	selectCurrentUser,
 	selectIsLoggedIn,
-} from "../features/session/sessionSlice";
+} from "../features/session/sessionSlice.js";
 
 export default function Profile() {
 	const currentUser = useSelector(selectCurrentUser);

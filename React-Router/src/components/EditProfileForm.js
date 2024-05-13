@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { editUser } from "../features/session/sessionSlice";
 import { useDispatch } from "react-redux";
+
+import { editUser } from "../features/session/sessionSlice.js";
 
 export default function EditProfileForm() {
 	const [username, setUsername] = useState("");

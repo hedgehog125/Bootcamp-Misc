@@ -9,10 +9,11 @@ table {
 .table-container {
 	overflow: scroll;
 }
-tr{
+tr {
 	border-top: 2px solid var(--border-color);
 }
-td, th {
+td,
+th {
 	padding: 10px 20px;
 	text-align: left;
 }
@@ -21,7 +22,6 @@ th {
 }
 thead > tr {
 	border-bottom: 3px solid var(--border-color);
-	
 }
 table {
 	border-collapse: collapse;
@@ -30,7 +30,7 @@ table {
 	border-right: 2px solid var(--border-color);
 }
 
-.name{
+.name {
 	font-weight: bold;
 }
 
@@ -41,20 +41,17 @@ table {
 	text-transform: uppercase;
 	padding: 10px 40px;
 	border: 2px solid #b5b8c0;
-	border-radius: 20px  20px;
+	border-radius: 20px 20px;
 }
 
-
-#candidates{
+#candidates {
 	background-color: white;
 }
 
 /* */
 
-@media screen and  (max-width: 920px) {
+@media screen and (max-width: 920px) {
 	table {
-		width:100%
-		
+		width: 100%;
 	}
-
 }

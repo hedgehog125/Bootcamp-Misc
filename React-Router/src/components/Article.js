@@ -1,8 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectArticles } from "../features/articles/articlesSlice";
-import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import { useSelector } from "react-redux";
+import { useParams, Link } from "react-router-dom";
+
+import { selectArticles } from "../features/articles/articlesSlice.js";
 
 export default function Article() {
 	const articles = useSelector(selectArticles);

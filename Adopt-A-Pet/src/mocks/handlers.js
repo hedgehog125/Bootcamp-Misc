@@ -1,7 +1,8 @@
 import { rest } from "msw";
-import types from "./data/types.json";
+
 import animals from "./data/animals.json";
 import details from "./data/details.json";
+import types from "./data/types.json";
 
 export const handlers = [
 	rest.get("/types", (_req, res, ctx) => {
@@ -14,7 +15,7 @@ export const handlers = [
 
 		if (type !== "") {
 			response = response.filter(
-				(animal) => animal.type.toLowerCase() === type.toLowerCase()
+				(animal) => animal.type.toLowerCase() === type.toLowerCase(),
 			);
 		}
 		if (query !== "") {
@@ -23,7 +24,7 @@ export const handlers = [
 					animal.contact.address.state
 						.toLowerCase()
 						.includes(query.toLowerCase()) ||
-					animal.name.toLowerCase().includes(query.toLowerCase())
+					animal.name.toLowerCase().includes(query.toLowerCase()),
 			);
 		}
 		return res(ctx.status(200), ctx.json(response));

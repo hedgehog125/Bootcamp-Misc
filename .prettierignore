@@ -1,0 +1,11 @@
+*.yaml
+*.yml
+
+node_modules
+package-lock.json
+/package.json # Generated file
+*/build
+
+
+
+Adopt-A-Pet/public/mockServiceWorker.js
